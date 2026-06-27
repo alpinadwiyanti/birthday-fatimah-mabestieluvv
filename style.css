@@ -1,0 +1,593 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    min-height:100vh;
+
+    background:linear-gradient(135deg,#b8416d,#854e62,#edd3a8);
+
+    overflow:hidden;
+}
+
+.container{
+
+    position:relative;
+
+    width:90%;
+    max-width:520px;
+
+    text-align:center;
+
+    padding:60px 40px;
+
+    background:rgba(255,255,255,.45);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.6);
+
+    border-radius:35px;
+
+    box-shadow:0 25px 60px rgba(0,0,0,.08);
+
+}
+
+h1{
+
+    font-size:40px;
+
+    color:#400525;
+
+}
+
+p{
+
+    margin-top:15px;
+
+    color:#170303;
+
+}
+
+.gift{
+
+    font-size:140px;
+
+    margin:35px 0;
+
+    filter:drop-shadow(0 15px 20px rgba(255,150,190,.35));
+
+    animation:float 2.8s ease-in-out infinite;
+
+}
+
+button{
+
+    border:none;
+
+    padding:16px 42px;
+
+    border-radius:50px;
+
+    background:linear-gradient(135deg,#cd4f7b,#b6436d);
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    box-shadow:0 10px 25px rgba(188, 24, 81, 0.35);
+
+}
+
+button:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 18px 35px rgba(230, 48, 112, 0.45);
+
+}
+
+button:hover{
+
+    transform:scale(1.05);
+
+}
+
+@keyframes float{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-18px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
+}
+.sparkle{
+
+    position:absolute;
+
+    font-size:28px;
+
+    animation:twinkle 4s infinite ease-in-out;
+
+}
+
+.s1{
+
+    top:12%;
+
+    left:15%;
+
+}
+
+.s2{
+
+    top:20%;
+
+    right:18%;
+
+    animation-delay:1s;
+
+}
+
+.s3{
+
+    bottom:18%;
+
+    left:12%;
+
+    animation-delay:2s;
+
+}
+
+.s4{
+
+    bottom:12%;
+
+    right:15%;
+
+    animation-delay:3s;
+
+}
+
+@keyframes twinkle{
+
+    0%,100%{
+
+        opacity:.3;
+
+        transform:scale(.8);
+
+    }
+
+    50%{
+
+        opacity:1;
+
+        transform:scale(1.2);
+
+    }
+
+}
+#birthdayPage{
+
+    position:fixed;
+
+    inset:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:linear-gradient(135deg,#e4a0d5,#FFE9F1,#fc51bd);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.8s;
+
+}
+
+#birthdayPage.show{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+#birthdayPage h1{
+
+    font-size:60px;
+
+    color:#a22347;
+
+    margin-bottom:15px;
+
+}
+
+#birthdayPage p{
+
+    color:#870244;
+
+    font-size:20px;
+
+}
+.photo{
+
+    width:260px;
+
+    height:330px;
+
+    object-fit: contain;
+
+    border-radius:20px;
+
+    margin:30px 0;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+
+    border:8px solid white;
+
+}
+
+.caption{
+
+    margin-top:15px;
+
+    font-size:18px;
+
+    color:#666;
+
+    max-width:350px;
+
+}
+#memoryPage{
+
+    position:fixed;
+    inset:0;
+
+    display:none;
+
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    background:linear-gradient(135deg,#e784ae,#FFE9F1,#951340);
+
+    opacity:0;
+    visibility:hidden;
+
+    transition:.8s;
+
+}
+
+#memoryPage.show{
+
+    display:flex;
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+.rope{
+    width:520px;
+    height:3px;
+    background:#C9A46A;
+    margin-bottom:30px;
+}
+.birthday-title{
+    font-size: 42px;
+    color: #a41d4f;
+    margin-bottom: 40px;
+}
+
+.photo-row{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: -15px;
+    flex-wrap: wrap;
+}
+
+.polaroid{
+    position: relative;
+
+    width: 220px;
+
+    background: white;
+
+    padding: 12px 12px 25px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,.15);
+
+    transform: rotate(-4deg);
+
+    transition: .3s;
+}
+
+.polaroid:nth-child(2){
+    transform: rotate(4deg);
+}
+
+.polaroid:hover{
+    transform: scale(1.05);
+}
+
+.polaroid img{
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    display: block;
+}
+
+.polaroid p{
+    margin-top: 15px;
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.clip{
+    position: absolute;
+
+    width: 18px;
+    height: 35px;
+
+    background: burlywood;
+
+    top: -18px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    border-radius: 4px;
+}
+#letterPage{
+    position: fixed;
+    inset: 0;
+
+    display: none;
+    justify-content: center;
+    align-items: flex-start;
+
+    overflow-y: auto;
+
+    padding: 50px 20px;
+
+    background: linear-gradient(135deg,#eb61c8,#efdbe2,#8d123f);
+}
+
+#letterPage.show{
+    display: flex;
+}
+
+#letterPage.show{
+
+    display:flex;
+
+}
+
+.letter-card{
+
+    width:90%;
+    max-width:750px;
+
+    background:rgb(217, 226, 248);
+
+    padding:50px;
+
+    border-radius:25px;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.12);
+
+    margin:40px 0;
+
+    animation:fadeIn .8s;
+
+}
+
+.letter-card h1{
+
+    text-align:center;
+
+    color:#b6436d;
+
+    margin-bottom:30px;
+
+}
+
+.letter-text{
+
+    font-size:18px;
+
+    line-height:2;
+
+    color:#555555;
+
+    text-align:justify;
+
+}
+
+@keyframes fadeIn{
+
+from{
+
+opacity:0;
+transform:translateY(30px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+.recipient{
+    text-align: center;
+    font-size: 17px;      /* ukuran nama */
+    font-weight: 500;
+    color: #960740;
+
+    margin-top: -30px;     /* mendekat ke judul */
+    margin-bottom: 30px;  /* jarak ke isi surat */
+}
+.signature{
+    text-align: right;
+    margin-top: 40px;
+}
+
+.signature p{
+    margin: 0;
+    font-size: 18px;
+    color: #777;
+    font-style: italic;
+}
+
+.signature h3{
+    margin-top: 8px;
+    font-size: 19px;
+    color: #b6436d;
+    font-family: 'Caveat', cursive;
+    font-weight: 600;
+}/* ===========================
+   RESPONSIVE (HP)
+=========================== */
+
+@media (max-width: 768px){
+
+    .container{
+        width:90%;
+        padding:40px 25px;
+    }
+
+    h1{
+        font-size:32px;
+    }
+
+    .gift{
+        font-size:100px;
+    }
+
+    #birthdayPage h1{
+        font-size:38px;
+        text-align:center;
+    }
+
+    .photo{
+        width:220px;
+        height:290px;
+    }
+
+    .birthday-title{
+        font-size:30px;
+        text-align:center;
+    }
+
+    .rope{
+        width:260px;
+    }
+
+    .photo-row{
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: nowrap;
+}
+
+    .polaroid{
+    width: 150px;
+}
+
+.polaroid img{
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+.polaroid p{
+    font-size: 11px;
+}
+
+    .letter-card{
+        width:92%;
+        padding:30px 22px;
+    }
+
+    .letter-text{
+        font-size:22px;
+    }
+
+    .signature h3{
+        font-size:26px;
+    }
+
+}
+#musicBtn{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+
+    width: 55px;
+    height: 55px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(230, 248, 126, 0.7);
+    backdrop-filter: blur(10px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 24px;
+    cursor: pointer;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,.15);
+
+    z-index: 9999;
+
+    transition: .3s;
+}
+
+#musicBtn:hover{
+    transform: scale(1.1);
+    background: rgb(224, 18, 131);
+    box-shadow: 0 12px 25px rgba(0,0,0,.2);
+}
